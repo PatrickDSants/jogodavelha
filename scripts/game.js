@@ -64,6 +64,12 @@ button.addEventListener("click", function () {
     var tds = document.getElementsByClassName("square");
     for(var i = 0; i < tds.length; i++) {
         tds[i].innerHTML = ''
-    }})
+    }
+
+    board = ['', '', '', '', '', '', '', '', ''];
+
+    gameOver = false
+
+})
 
     

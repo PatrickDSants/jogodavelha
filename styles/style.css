@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+body{
+    text-align: center;
+}
+
+h1{
+    font-family: 'Great Vibes', cursive;
+}
+
+.square{
+    width: 100px;
+    height: 100px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-top:  1px solid rgb(0, 0, 0);
+    border-left: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.o{
+    position: relative;
+}
+
+.o:after{
+    position: absolute;
+    content: "\1F6E1";
+    font-size: 50px;
+    line-height: 100px;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+.x{
+    position: relative;
+}
+
+.x:after{
+    position: absolute;
+    content: "\2694";
+    font-size: 50px;
+    line-height: 100px;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.box {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    margin: 0 auto;
+
+}
+
+.text_tittle {
+    font-size: 3rem;
+    color: white;
+    font-family: 'Great Vibes', cursive;
+}
+
+.style_letter {
+    color: rgb(0, 0, 0);
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+}
+
+.image_player {
+    width: 35vw;
+}
+
+.game {
+    width: 30vw;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.box_game {
+    height: 100vh;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4rem 0 0 4rem;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;  
+
+    
+}
+
+.text_game {
+    width: 25rem;
+    margin-top: 2rem;
+}

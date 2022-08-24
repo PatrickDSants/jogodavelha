@@ -1,6 +1,6 @@
 <h1 align="center" id="Título-e-Imagem-de-capa"> Jogo da velha </h1>
 
-<a href= "https://mochilade-viagem.vercel.app//">SITE HERE</a>
+<a href= "https://jogodavelha-ruby.vercel.app/">SITE HERE</a>
 
 <p align="center">
 <a href="https://github.com/PatrickDSants/landingpage/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/PatrickDSants/landingpage?style=for-the-badge"></a>

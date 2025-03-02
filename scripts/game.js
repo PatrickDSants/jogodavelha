@@ -1,4 +1,3 @@
-// iniciar minhas variáveis
 let board = ['', '', '', '', '', '', '', '', ''];
 let playerTime = 0;
 let symbols = ['o', 'x'];
@@ -13,63 +12,32 @@ let winStates = [
     [2, 5, 8],
     [0, 4, 8],
     [2, 4, 6],
-]
+];
 
 function handleMove(position) {
-
-    if (gameOver) {
-        return;
+    if (gameOver || board[position] !== '') {
+        return false;
     }
 
-    if (board[position] == '') {
-        board[position] = symbols[playerTime];
+    board[position] = symbols[playerTime];
+    gameOver = isWin();
 
-
-        gameOver = isWin();
-
-        if (gameOver == false) {
-
-            playerTime = (playerTime == 0) ? 1 : 0;
-        }
+    if (!gameOver) {
+        playerTime = (playerTime === 0) ? 1 : 0;
     }
 
     return gameOver;
 }
 
-
 function isWin() {
-
     for (let i = 0; i < winStates.length; i++) {
-        let seq = winStates[i];
+        let [pos1, pos2, pos3] = winStates[i];
 
-        let pos1 = seq[0];
-        let pos2 = seq[1];
-        let pos3 = seq[2];
-
-        if (board[pos1] == board[pos2] &&
-            board[pos1] == board[pos3] &&
-            board[pos1] != '') {
-
+        if (board[pos1] !== '' && board[pos1] === board[pos2] && board[pos1] === board[pos3]) {
             return true;
         }
-
     }
-
     return false;
 }
-
-let button = document.getElementById("button");
-
-button.addEventListener("click", function () {
-    var tds = document.getElementsByClassName("square");
-    for(var i = 0; i < tds.length; i++) {
-        tds[i].innerHTML = ''
-    }
-
-    board = ['', '', '', '', '', '', '', '', ''];
-
-    gameOver = false
-
-})
 
     

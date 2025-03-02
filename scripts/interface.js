@@ -39,16 +39,17 @@ function updateSquares() {
 
         if (symbol !== '') {
             square.innerHTML = `<div class='${symbol}'></div>`;
+        } else {
+            square.innerHTML = '';
         }
     });
 }
 
+// Função de reset para limpar o tabuleiro
 function resetGame() {
-    let squares = document.querySelectorAll(".square");
-    
-    squares.forEach(square => square.innerHTML = '');
-
     board = ['', '', '', '', '', '', '', '', ''];
     gameOver = false;
     playerTime = 0;
+    updateSquares();
 }
+

@@ -22,11 +22,20 @@ function handleMove(position) {
     board[position] = symbols[playerTime];
     gameOver = isWin();
 
-    if (!gameOver) {
-        playerTime = (playerTime === 0) ? 1 : 0;
+    if (gameOver) {
+        return true;
     }
 
-    return gameOver;
+    if (isDraw()) {
+        setTimeout(() => {
+            alert("Deu velha! O jogo será reiniciado.");
+            resetGame();
+        }, 10);
+        return false;
+    }
+
+    playerTime = (playerTime === 0) ? 1 : 0;
+    return false;
 }
 
 function isWin() {
@@ -39,5 +48,19 @@ function isWin() {
     }
     return false;
 }
+
+// Função para verificar empate
+function isDraw() {
+    return board.every(cell => cell !== '');
+}
+
+// Função para resetar o jogo
+function resetGame() {
+    board = ['', '', '', '', '', '', '', '', ''];
+    gameOver = false;
+    playerTime = 0;
+    updateSquares();
+}
+
 
     
